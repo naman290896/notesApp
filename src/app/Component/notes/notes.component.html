@@ -1,0 +1,4 @@
+<div class="noteDetails" *ngFor = "let notes of noteList">
+    <p class="noteDate text-center">{{notes.date | date:'medium' }}</p>
+    <p contenteditable="true" [textContent]="notes.content" (keyup)="updateNote($event)">{{notes.content}}</p>
+</div>

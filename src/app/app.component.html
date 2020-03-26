@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="actionPanel">
+                <button class="btn btn-primary mr-3" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"><i class="fa fa-bars hamburgerIcon"></i></button>
+                <button class="btn btn-primary" routerLink="/addNote">Add Note</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-3" id="collapseBasic" [collapse]="isCollapsed">
+            <div class="bgWhite">
+                <app-note-title></app-note-title>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="bgWhite">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

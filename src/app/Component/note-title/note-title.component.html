@@ -1,0 +1,15 @@
+<div class="panel-heading">
+	<div class="actions">
+		<input type="text" class="form-control" placeholder="Search notes" [(ngModel)]="searchText">
+	</div>
+	<ul class="nav-tabs m-0 p-0">
+		<li *ngFor="let note of noteList | filter:searchText; let i = index" [routerLinkActive]="'active'">
+			<a class="tab_link mr-3" routerLink="/notes/{{note.title}}">
+				<span>{{note.title}}</span>
+			</a>
+			<i class="fa fa-trash deleteNote" (click)="deleteNote(i)"></i>
+			<span class="noteDate">{{note.date | date:'short' }}</span>
+			<p class="mr-3">{{note.content}}</p>
+		</li>
+	</ul>
+</div>

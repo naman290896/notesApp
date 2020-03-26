@@ -1,0 +1,43 @@
+.panel-heading{
+    .actions{
+        margin-bottom:15px;
+    }
+    .nav-tabs{
+        border: 0;
+        height: 300px;
+        overflow: auto;
+        li{
+            width: 100%;
+            display: block;
+            position: relative;
+            height: 70px;
+            padding: 5px;
+            border-bottom: solid 1px #ddd;
+            &.active{
+                background-color: #eee;
+            }
+            a{
+                font-weight:bold;
+                display: block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            p{
+                overflow: hidden;
+                white-space: nowrap;
+                height: auto;
+                text-overflow: ellipsis;
+            }
+            .deleteNote{
+                font-size:16px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            .noteDate{
+                opacity:0.8;
+            }
+        }
+    }
+}
